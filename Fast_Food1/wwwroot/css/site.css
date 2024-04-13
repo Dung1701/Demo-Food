@@ -1,0 +1,203 @@
+﻿html {
+    font-size: 14px;
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+    box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    margin-bottom: 60px;
+}
+
+/* Heder */
+.navbar-brand {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+}
+
+    .navbar-brand img {
+        width: calc(100% - 60%);
+        object-fit: contain;
+        text-align: center;
+    }
+
+    .navbar-brand h5 {
+        font-size: 1rem;
+        font-weight: 600;
+    }
+
+.navbar-nav {
+    justify-content: center;
+    gap: 30px;
+    font-size: 20px;
+}
+
+    .navbar-nav .nav-item a:hover {
+        color: red;
+    }
+
+.container-fluid {
+    margin: 0px 212px;
+}
+.btn-back-to-cart {
+    display: inline-block;
+    padding: 5px 10px; /* Kích thước nút lớn hơn */
+    font-size: 16px;
+    text-align: center;
+    margin-top: 20px; /* Khoảng cách từ nút đến phần trên */
+    border: 2px solid #007bff; /* Màu viền */
+    background-color: #007bff; /* Màu nền */
+    color: #ffffff; /* Màu chữ */
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+    .btn-back-to-cart:hover {
+        background-color: #0056b3; /* Màu nền khi di chuột qua */
+        border-color: #0056b3; /* Màu viền khi di chuột qua */
+        color: #ffffff; /* Màu chữ khi di chuột qua */
+    }
+
+/* Chỉnh kích thước nút */
+.w-50 {
+    width: 50%;
+}
+.address-label {
+    text-align: center; /* Căn giữa theo chiều ngang */
+    margin-bottom: 20px; /* Khoảng cách từ nhãn đến phần dưới */
+}
+.payment-label {
+    text-align: center; /* Căn giữa theo chiều ngang */
+    margin-bottom: 20px; /* Khoảng cách từ chữ Payment đến phần dưới */
+}
+/* CSS cho nhãn "Enter Address" và "Payment" */
+.label {
+    font-size: 20px; /* Tăng kích thước chữ */
+    text-align: center; /* Căn giữa theo chiều ngang */
+    margin-bottom: 20px; /* Khoảng cách từ nhãn đến phần dưới */
+}
+
+/* CSS cho ô nhập "Address" */
+.address-input {
+    text-align: center; /* Căn giữa theo chiều ngang */
+    margin-bottom: 20px; /* Khoảng cách từ ô nhập đến phần dưới */
+}
+
+.payment-methods {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Khoảng cách giữa các phương thức thanh toán */
+    flex-wrap: wrap;
+}
+
+.payment-method {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+    position: relative; /* Đặt position cho dấu tích */
+}
+
+    .payment-method input[type="radio"] {
+        display: none;
+    }
+
+    .payment-method .payment-info {
+        border: 2px solid #8B4513; /* Màu viền mặc định */
+        transition: border-color 0.3s ease;
+        padding: 5px;
+    }
+
+    .payment-method img {
+        width: 70px;
+        height: auto;
+        cursor: pointer;
+        margin-bottom: 5px;
+    }
+
+    .payment-method span {
+        font-size: 16px;
+        cursor: pointer;
+    }
+
+    .payment-method input[type="radio"]:checked + .payment-info {
+        border-color: red; /* Màu viền khi được chọn */
+    }
+
+        .payment-method input[type="radio"]:checked + .payment-info::after {
+            content: "\2714"; /* Dấu tích Unicode */
+            font-size: 20px;
+            color: red;
+            position: absolute;
+            top: -5px;
+            right: -5px;
+        }
+    /* Khi chọn một phương thức thanh toán, các phương thức còn lại sẽ trở nên mờ */
+    .payment-method input[type="radio"]:not(:checked) + .payment-info {
+        opacity: 0.5;
+        Độ mờ pointer-events: none;
+        Không cho phép sự kiện click
+    }
+
+
+/* CSS tùy chỉnh cho nút buttons */
+.custom-btn {
+    display: inline-block;
+    padding: 8px 16px;
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+    border: 2px solid #007bff; /* Màu viền */
+    background-color: #007bff; /* Màu nền */
+    color: #ffffff; /* Màu chữ */
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+    .custom-btn:hover {
+        background-color: #0056b3; /* Màu nền khi di chuột qua */
+        border-color: #0056b3; /* Màu viền khi di chuột qua */
+        color: #ffffff; /* Màu chữ khi di chuột qua */
+    }
+
+    .custom-btn .icon {
+        margin-right: 5px;
+    }
+
+/* CSS cho nút Place Order */
+.text-center {
+    text-align: center;
+    margin-top: 20px; /* Khoảng cách từ nút đến phần trên */
+}
+
+.btn-place-order {
+    padding: 15px 30px;
+    font-size: 16px;
+    border: 2px solid #007bff;
+    background-color: #007bff;
+    color: #ffffff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+    .btn-place-order:hover {
+        background-color: #0056b3;
+        border-color: #0056b3;
+        color: #ffffff;
+    }
+
+
+

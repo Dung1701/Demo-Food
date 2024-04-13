@@ -1,0 +1,105 @@
+﻿@model Fast_Food1.Models.DataOrder;
+@using Fast_Food1.Models;
+@using Fast_Food1.Extensions;
+@{
+    var count = 1;
+    var item = ViewBag.Cart as List<CartItem>;
+    var paymethod = ViewBag.PaymentMethods as List<PaymentMethods>;
+}
+
+<div>
+    <div class="order-container">
+        <form class="order">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+            <div class="order-container">
+                <h3>CHECK OUT</h3>
+            </div>
+            <hr />
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Title</th>
+                        <th>Price</th>
+                        <th>Quantity</th>
+                        <th>Total</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    @foreach (var cart in item!)
+                    {
+                        cart.Food!.FinalPrice = (decimal)(cart.Food!.Price * (100 - cart.Food!.DiscountToday) / 100);
+                        <tr>
+                            <td>@count</td>
+                            <td>
+                                @cart.Food!.Title
+                            </td>
+
+                            <td>
+                                $@cart.Food.FinalPrice
+                            </td>
+
+                            <td>
+                                @cart.Quantity
+                            </td>
+
+                            <td>
+                                $@cart.SubTotal
+                            </td>
+                        </tr>
+                        count++;
+                    }
+                    <tr></tr>
+                    <tr>
+
+                        <td colspan="6" style="text-align:right">
+                            Total: $@ViewBag.total
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </form>
+    </div>
+</div>
+<div class="order-container">
+    <p class="btn-back-to-cart">
+        <a asp-controller="Cart" asp-action="Index" class="btn btn-lg btn-primary">Back To Cart</a>
+    </p>
+</div>
+
+<form asp-controller="CheckOut" asp-action="CreateOrder" method="post" class="form-group">
+    <input asp-for="Total" value="@ViewBag.total" type="hidden" />
+    <div class="order-container form-group">
+        <div class="address-label">
+            <label for="address">Enter Address</label>
+        </div>
+        <div class="address-input">
+            <textarea class="m-lg-2 w-50" name="address" asp-for="Address" rows="1"></textarea>
+        </div>
+    </div>
+
+    <div class="order-container">
+        <div class="payment-label">
+            <label for="paymentMethod">Payment</label>
+        </div>
+        <div class="payment-methods">
+            @foreach (var method in ViewBag.PaymentMethods)
+            {
+                <label class="payment-method">
+                    <input type="radio" asp-for="MethodId" name="MethodId" value="@method.Id" />
+                    <div class="payment-info">
+                        <img src="@method.MethodImage" alt="@method.Name" />
+                        <span>@method.Name</span>
+                    </div>
+                </label>
+            }
+        </div>
+    </div>
+
+    <div class="text-center">
+        <button type="submit" class="w-50 btn btn-lg btn-place-order">Place Order</button>
+    </div>
+</form>
+

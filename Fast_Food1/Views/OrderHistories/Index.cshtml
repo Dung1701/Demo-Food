@@ -1,0 +1,157 @@
+﻿@model IEnumerable<Fast_Food1.Models.Order>
+
+@{
+    ViewData["Title"] = "Order History";
+}
+
+<style>
+    .table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 20px auto;
+        border-radius: 5px;
+    }
+
+    th, td {
+        padding: 10px 15px;
+        text-align: left;
+        border-bottom: 1px solid #ddd;
+    }
+
+    th {
+        background-color: #f2f2f2;
+        color: #333;
+        font-weight: bold;
+    }
+
+    .total-row td {
+        border-top: 2px solid #000;
+        font-weight: bold;
+    }
+
+    .total-column {
+        text-align: right;
+    }
+
+    /* Shopee-inspired color scheme */
+    .table th {
+        background-color: #f0f0f0;
+    }
+
+    .shopee-orange {
+        color: #f39c12;
+    }
+
+    .total-row .shopee-orange {
+        font-weight: bolder;
+    }
+
+    /* Order frame styles */
+    .order-frame {
+        margin-bottom: 20px;
+        border: 1px solid #ddd;
+        padding: 15px;
+        border-radius: 5px;
+    }
+
+    .order-header {
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+
+    .order-details {
+        /* CSS for styling order details (optional) */
+    }
+
+    /* Order info styles */
+    .order-info {
+        margin-bottom: 15px;
+    }
+
+        .order-info label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        .order-info span {
+            display: block;
+        }
+</style>
+
+<h1>Order History</h1>
+
+@foreach (var order in Model)
+{
+    <div class="order-frame">
+        <div class="order-header">
+            <h2>Order #@order.Id</h2>
+            <p>OrderDate: @order.OrderDate.ToString("dd/MM/yyyy")</p>
+            @{
+                if(order.Status == false)
+                {
+                    <form asp-action="OrderConfirm" asp-route-id="@order.Id" method="post">
+                        <input type="hidden" asp-for="@order.Id" value="@order.Id" name="@order.Id">
+                        <input type="submit" value="Order Received Confirm" class="btn btn-primary">
+                    </form>
+                }
+                else
+                {
+                    <p>Received Date: @order.ReceivedDate.ToString("dd/MM/yyyy")</p>
+                }
+            }
+            
+        </div>
+
+        <div class="order-info">
+            <label>PaymentMethod:</label>
+            <span>
+                @if (order.PaymentMethods != null)
+                {
+                    @order.PaymentMethods.Name
+                }
+                else
+                {
+                    <span class="text-danger">Not Update</span>
+                }
+            </span>
+
+            <label>Address:</label>
+            <span>@order.Address</span>
+        </div>
+
+        <table class="order-details">
+            <thead>
+                <tr>
+                    <th>Product</th>
+                    <th>Price</th>
+                    <th>Quantity</th>
+                    <th>Total</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var detail in order.OrderDetails)
+                {
+                    decimal itemTotal = detail.Quantity * detail.Food.Price; // Calculate item total
+
+                    <tr>
+                        <td>@Html.DisplayFor(modelItem => detail.Food.Title)</td>
+                        <td>@Html.DisplayFor(modelItem => detail.Food.Price)</td>
+                        <td>@Html.DisplayFor(modelItem => detail.Quantity)</td>
+                        <td>@itemTotal.ToString("C")</td>
+                    </tr>
+                }
+
+                <tr class="total-row">
+                    <td colspan="3"><b>Total Order:</b></td>
+                    <td class="total-column"><b><span class="shopee-orange">@order.TotalPrice.ToString("C")</span></b></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+}
+
+<tr class="total-row">
+    <td colspan="3"><b>Total:</b></td>
+    <td class="total-column"><b><span class="shopee-orange">@Model.Sum(o => o.TotalPrice).ToString("C")</span></b></td>
+</tr>

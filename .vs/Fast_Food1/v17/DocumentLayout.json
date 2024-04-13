@@ -1,0 +1,666 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\LT Web purple\\Fast_Food1\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{DE7F7F12-92D2-4220-9DFF-9D549AD8AC98}|Fast_Food1\\Fast_Food1.csproj|d:\\lt web purple\\fast_food1\\fast_food1\\views\\foods\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DE7F7F12-92D2-4220-9DFF-9D549AD8AC98}|Fast_Food1\\Fast_Food1.csproj|solutionrelative:fast_food1\\views\\foods\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DE7F7F12-92D2-4220-9DFF-9D549AD8AC98}|Fast_Food1\\Fast_Food1.csproj|d:\\lt web purple\\fast_food1\\fast_food1\\controllers\\foodscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DE7F7F12-92D2-4220-9DFF-9D549AD8AC98}|Fast_Food1\\Fast_Food1.csproj|solutionrelative:fast_food1\\controllers\\foodscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DE7F7F12-92D2-4220-9DFF-9D549AD8AC98}|Fast_Food1\\Fast_Food1.csproj|d:\\lt web purple\\fast_food1\\fast_food1\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DE7F7F12-92D2-4220-9DFF-9D549AD8AC98}|Fast_Food1\\Fast_Food1.csproj|solutionrelative:fast_food1\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DE7F7F12-92D2-4220-9DFF-9D549AD8AC98}|Fast_Food1\\Fast_Food1.csproj|d:\\lt web purple\\fast_food1\\fast_food1\\models\\food.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DE7F7F12-92D2-4220-9DFF-9D549AD8AC98}|Fast_Food1\\Fast_Food1.csproj|solutionrelative:fast_food1\\models\\food.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DE7F7F12-92D2-4220-9DFF-9D549AD8AC98}|Fast_Food1\\Fast_Food1.csproj|d:\\lt web purple\\fast_food1\\fast_food1\\views\\foods\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DE7F7F12-92D2-4220-9DFF-9D549AD8AC98}|Fast_Food1\\Fast_Food1.csproj|solutionrelative:fast_food1\\views\\foods\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DE7F7F12-92D2-4220-9DFF-9D549AD8AC98}|Fast_Food1\\Fast_Food1.csproj|d:\\lt web purple\\fast_food1\\fast_food1\\views\\foods\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DE7F7F12-92D2-4220-9DFF-9D549AD8AC98}|Fast_Food1\\Fast_Food1.csproj|solutionrelative:fast_food1\\views\\foods\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DE7F7F12-92D2-4220-9DFF-9D549AD8AC98}|Fast_Food1\\Fast_Food1.csproj|d:\\lt web purple\\fast_food1\\fast_food1\\controllers\\orderscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DE7F7F12-92D2-4220-9DFF-9D549AD8AC98}|Fast_Food1\\Fast_Food1.csproj|solutionrelative:fast_food1\\controllers\\orderscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DE7F7F12-92D2-4220-9DFF-9D549AD8AC98}|Fast_Food1\\Fast_Food1.csproj|d:\\lt web purple\\fast_food1\\fast_food1\\views\\orders\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DE7F7F12-92D2-4220-9DFF-9D549AD8AC98}|Fast_Food1\\Fast_Food1.csproj|solutionrelative:fast_food1\\views\\orders\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DE7F7F12-92D2-4220-9DFF-9D549AD8AC98}|Fast_Food1\\Fast_Food1.csproj|d:\\lt web purple\\fast_food1\\fast_food1\\views\\orderhistories\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DE7F7F12-92D2-4220-9DFF-9D549AD8AC98}|Fast_Food1\\Fast_Food1.csproj|solutionrelative:fast_food1\\views\\orderhistories\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DE7F7F12-92D2-4220-9DFF-9D549AD8AC98}|Fast_Food1\\Fast_Food1.csproj|d:\\lt web purple\\fast_food1\\fast_food1\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DE7F7F12-92D2-4220-9DFF-9D549AD8AC98}|Fast_Food1\\Fast_Food1.csproj|solutionrelative:fast_food1\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DE7F7F12-92D2-4220-9DFF-9D549AD8AC98}|Fast_Food1\\Fast_Food1.csproj|d:\\lt web purple\\fast_food1\\fast_food1\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{DE7F7F12-92D2-4220-9DFF-9D549AD8AC98}|Fast_Food1\\Fast_Food1.csproj|solutionrelative:fast_food1\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/aspnet_Fast_Food1_90b869cf_8159_4a4d_8473_541dd3f96485/True/SqlTable/dbo.Food.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DE7F7F12-92D2-4220-9DFF-9D549AD8AC98}|Fast_Food1\\Fast_Food1.csproj|d:\\lt web purple\\fast_food1\\fast_food1\\models\\foodcategoryview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DE7F7F12-92D2-4220-9DFF-9D549AD8AC98}|Fast_Food1\\Fast_Food1.csproj|solutionrelative:fast_food1\\models\\foodcategoryview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DE7F7F12-92D2-4220-9DFF-9D549AD8AC98}|Fast_Food1\\Fast_Food1.csproj|d:\\lt web purple\\fast_food1\\fast_food1\\views\\orders\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DE7F7F12-92D2-4220-9DFF-9D549AD8AC98}|Fast_Food1\\Fast_Food1.csproj|solutionrelative:fast_food1\\views\\orders\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DE7F7F12-92D2-4220-9DFF-9D549AD8AC98}|Fast_Food1\\Fast_Food1.csproj|d:\\lt web purple\\fast_food1\\fast_food1\\views\\foods\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DE7F7F12-92D2-4220-9DFF-9D549AD8AC98}|Fast_Food1\\Fast_Food1.csproj|solutionrelative:fast_food1\\views\\foods\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DE7F7F12-92D2-4220-9DFF-9D549AD8AC98}|Fast_Food1\\Fast_Food1.csproj|d:\\lt web purple\\fast_food1\\fast_food1\\views\\foods\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DE7F7F12-92D2-4220-9DFF-9D549AD8AC98}|Fast_Food1\\Fast_Food1.csproj|solutionrelative:fast_food1\\views\\foods\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DE7F7F12-92D2-4220-9DFF-9D549AD8AC98}|Fast_Food1\\Fast_Food1.csproj|d:\\lt web purple\\fast_food1\\fast_food1\\controllers\\checkoutcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DE7F7F12-92D2-4220-9DFF-9D549AD8AC98}|Fast_Food1\\Fast_Food1.csproj|solutionrelative:fast_food1\\controllers\\checkoutcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DE7F7F12-92D2-4220-9DFF-9D549AD8AC98}|Fast_Food1\\Fast_Food1.csproj|d:\\lt web purple\\fast_food1\\fast_food1\\controllers\\cartitemscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DE7F7F12-92D2-4220-9DFF-9D549AD8AC98}|Fast_Food1\\Fast_Food1.csproj|solutionrelative:fast_food1\\controllers\\cartitemscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DE7F7F12-92D2-4220-9DFF-9D549AD8AC98}|Fast_Food1\\Fast_Food1.csproj|d:\\lt web purple\\fast_food1\\fast_food1\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DE7F7F12-92D2-4220-9DFF-9D549AD8AC98}|Fast_Food1\\Fast_Food1.csproj|solutionrelative:fast_food1\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DE7F7F12-92D2-4220-9DFF-9D549AD8AC98}|Fast_Food1\\Fast_Food1.csproj|d:\\lt web purple\\fast_food1\\fast_food1\\views\\checkout\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DE7F7F12-92D2-4220-9DFF-9D549AD8AC98}|Fast_Food1\\Fast_Food1.csproj|solutionrelative:fast_food1\\views\\checkout\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/aspnet_Fast_Food1_90b869cf_8159_4a4d_8473_541dd3f96485/True/SqlTable/dbo.Order.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DE7F7F12-92D2-4220-9DFF-9D549AD8AC98}|Fast_Food1\\Fast_Food1.csproj|d:\\lt web purple\\fast_food1\\fast_food1\\models\\orderdetail.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DE7F7F12-92D2-4220-9DFF-9D549AD8AC98}|Fast_Food1\\Fast_Food1.csproj|solutionrelative:fast_food1\\models\\orderdetail.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DE7F7F12-92D2-4220-9DFF-9D549AD8AC98}|Fast_Food1\\Fast_Food1.csproj|d:\\lt web purple\\fast_food1\\fast_food1\\models\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DE7F7F12-92D2-4220-9DFF-9D549AD8AC98}|Fast_Food1\\Fast_Food1.csproj|solutionrelative:fast_food1\\models\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DE7F7F12-92D2-4220-9DFF-9D549AD8AC98}|Fast_Food1\\Fast_Food1.csproj|d:\\lt web purple\\fast_food1\\fast_food1\\views\\cartitems\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DE7F7F12-92D2-4220-9DFF-9D549AD8AC98}|Fast_Food1\\Fast_Food1.csproj|solutionrelative:fast_food1\\views\\cartitems\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DE7F7F12-92D2-4220-9DFF-9D549AD8AC98}|Fast_Food1\\Fast_Food1.csproj|d:\\lt web purple\\fast_food1\\fast_food1\\controllers\\orderhistoriescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DE7F7F12-92D2-4220-9DFF-9D549AD8AC98}|Fast_Food1\\Fast_Food1.csproj|solutionrelative:fast_food1\\controllers\\orderhistoriescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DE7F7F12-92D2-4220-9DFF-9D549AD8AC98}|Fast_Food1\\Fast_Food1.csproj|d:\\lt web purple\\fast_food1\\fast_food1\\views\\checkout\\paymentcompleted.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DE7F7F12-92D2-4220-9DFF-9D549AD8AC98}|Fast_Food1\\Fast_Food1.csproj|solutionrelative:fast_food1\\views\\checkout\\paymentcompleted.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DE7F7F12-92D2-4220-9DFF-9D549AD8AC98}|Fast_Food1\\Fast_Food1.csproj|d:\\lt web purple\\fast_food1\\fast_food1\\models\\dataorder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DE7F7F12-92D2-4220-9DFF-9D549AD8AC98}|Fast_Food1\\Fast_Food1.csproj|solutionrelative:fast_food1\\models\\dataorder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DE7F7F12-92D2-4220-9DFF-9D549AD8AC98}|Fast_Food1\\Fast_Food1.csproj|d:\\lt web purple\\fast_food1\\fast_food1\\models\\orderhistory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DE7F7F12-92D2-4220-9DFF-9D549AD8AC98}|Fast_Food1\\Fast_Food1.csproj|solutionrelative:fast_food1\\models\\orderhistory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DE7F7F12-92D2-4220-9DFF-9D549AD8AC98}|Fast_Food1\\Fast_Food1.csproj|d:\\lt web purple\\fast_food1\\fast_food1\\controllers\\paymentmethodscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DE7F7F12-92D2-4220-9DFF-9D549AD8AC98}|Fast_Food1\\Fast_Food1.csproj|solutionrelative:fast_food1\\controllers\\paymentmethodscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/aspnet_Fast_Food1_90b869cf_8159_4a4d_8473_541dd3f96485/True/SqlTable/dbo.Comments.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DE7F7F12-92D2-4220-9DFF-9D549AD8AC98}|Fast_Food1\\Fast_Food1.csproj|d:\\lt web purple\\fast_food1\\fast_food1\\views\\checkout\\failed.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DE7F7F12-92D2-4220-9DFF-9D549AD8AC98}|Fast_Food1\\Fast_Food1.csproj|solutionrelative:fast_food1\\views\\checkout\\failed.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DE7F7F12-92D2-4220-9DFF-9D549AD8AC98}|Fast_Food1\\Fast_Food1.csproj|d:\\lt web purple\\fast_food1\\fast_food1\\areas\\identity\\pages\\account\\register.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DE7F7F12-92D2-4220-9DFF-9D549AD8AC98}|Fast_Food1\\Fast_Food1.csproj|solutionrelative:fast_food1\\areas\\identity\\pages\\account\\register.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DE7F7F12-92D2-4220-9DFF-9D549AD8AC98}|Fast_Food1\\Fast_Food1.csproj|d:\\lt web purple\\fast_food1\\fast_food1\\areas\\identity\\pages\\account\\login.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DE7F7F12-92D2-4220-9DFF-9D549AD8AC98}|Fast_Food1\\Fast_Food1.csproj|solutionrelative:fast_food1\\areas\\identity\\pages\\account\\login.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/aspnet_Fast_Food1_90b869cf_8159_4a4d_8473_541dd3f96485/True/SqlTable/dbo.OrderDetail.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DE7F7F12-92D2-4220-9DFF-9D549AD8AC98}|Fast_Food1\\Fast_Food1.csproj|d:\\lt web purple\\fast_food1\\fast_food1\\models\\paymentmethods.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DE7F7F12-92D2-4220-9DFF-9D549AD8AC98}|Fast_Food1\\Fast_Food1.csproj|solutionrelative:fast_food1\\models\\paymentmethods.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\LT Web purple\\Fast_Food1\\Fast_Food1\\Data\\Migrations\\20240410035955_update05.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Fast_Food1\\Data\\Migrations\\20240410035955_update05.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DE7F7F12-92D2-4220-9DFF-9D549AD8AC98}|Fast_Food1\\Fast_Food1.csproj|d:\\lt web purple\\fast_food1\\fast_food1\\models\\seeddata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DE7F7F12-92D2-4220-9DFF-9D549AD8AC98}|Fast_Food1\\Fast_Food1.csproj|solutionrelative:fast_food1\\models\\seeddata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\LT Web purple\\Fast_Food1\\Fast_Food1\\Data\\Migrations\\20240409153955_update02.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Fast_Food1\\Data\\Migrations\\20240409153955_update02.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DE7F7F12-92D2-4220-9DFF-9D549AD8AC98}|Fast_Food1\\Fast_Food1.csproj|d:\\lt web purple\\fast_food1\\fast_food1\\extensions\\sessionextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DE7F7F12-92D2-4220-9DFF-9D549AD8AC98}|Fast_Food1\\Fast_Food1.csproj|solutionrelative:fast_food1\\extensions\\sessionextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DE7F7F12-92D2-4220-9DFF-9D549AD8AC98}|Fast_Food1\\Fast_Food1.csproj|d:\\lt web purple\\fast_food1\\fast_food1\\data\\migrations\\20240410061637_update06.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DE7F7F12-92D2-4220-9DFF-9D549AD8AC98}|Fast_Food1\\Fast_Food1.csproj|solutionrelative:fast_food1\\data\\migrations\\20240410061637_update06.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DE7F7F12-92D2-4220-9DFF-9D549AD8AC98}|Fast_Food1\\Fast_Food1.csproj|d:\\lt web purple\\fast_food1\\fast_food1\\data\\migrations\\20240410040306_update05.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DE7F7F12-92D2-4220-9DFF-9D549AD8AC98}|Fast_Food1\\Fast_Food1.csproj|solutionrelative:fast_food1\\data\\migrations\\20240410040306_update05.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{e8b06f53-6d01-11d2-aa7d-00c04f990343}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "D:\\LT Web purple\\Fast_Food1\\Fast_Food1\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "Fast_Food1\\Controllers\\HomeController.cs",
+              "ToolTip": "D:\\LT Web purple\\Fast_Food1\\Fast_Food1\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "Fast_Food1\\Controllers\\HomeController.cs",
+              "ViewState": "AQIAABUAAAAAAAAAAAAiwDEAAAAjAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-09T15:57:00.493Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "D:\\LT Web purple\\Fast_Food1\\Fast_Food1\\Views\\Foods\\Details.cshtml",
+              "RelativeDocumentMoniker": "Fast_Food1\\Views\\Foods\\Details.cshtml",
+              "ToolTip": "D:\\LT Web purple\\Fast_Food1\\Fast_Food1\\Views\\Foods\\Details.cshtml",
+              "RelativeToolTip": "Fast_Food1\\Views\\Foods\\Details.cshtml",
+              "ViewState": "AQIAAD8AAAAAAAAAAAAAAE8AAAAGAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-04-11T16:28:45.254Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "OrdersController.cs",
+              "DocumentMoniker": "D:\\LT Web purple\\Fast_Food1\\Fast_Food1\\Controllers\\OrdersController.cs",
+              "RelativeDocumentMoniker": "Fast_Food1\\Controllers\\OrdersController.cs",
+              "ToolTip": "D:\\LT Web purple\\Fast_Food1\\Fast_Food1\\Controllers\\OrdersController.cs",
+              "RelativeToolTip": "Fast_Food1\\Controllers\\OrdersController.cs",
+              "ViewState": "AQIAAGwAAAAAAAAAAAAkwKcAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-10T03:44:11.128Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "FoodsController.cs",
+              "DocumentMoniker": "D:\\LT Web purple\\Fast_Food1\\Fast_Food1\\Controllers\\FoodsController.cs",
+              "RelativeDocumentMoniker": "Fast_Food1\\Controllers\\FoodsController.cs",
+              "ToolTip": "D:\\LT Web purple\\Fast_Food1\\Fast_Food1\\Controllers\\FoodsController.cs",
+              "RelativeToolTip": "Fast_Food1\\Controllers\\FoodsController.cs",
+              "ViewState": "AQIAAJIAAAAAAAAAAAAAANAAAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-09T15:18:36.89Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\LT Web purple\\Fast_Food1\\Fast_Food1\\Views\\Foods\\Index.cshtml",
+              "RelativeDocumentMoniker": "Fast_Food1\\Views\\Foods\\Index.cshtml",
+              "ToolTip": "D:\\LT Web purple\\Fast_Food1\\Fast_Food1\\Views\\Foods\\Index.cshtml",
+              "RelativeToolTip": "Fast_Food1\\Views\\Foods\\Index.cshtml",
+              "ViewState": "AQIAAD8AAAAAAAAAAAAAAEcAAAAQAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-04-11T11:20:44.413Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "D:\\LT Web purple\\Fast_Food1\\Fast_Food1\\Views\\Orders\\Details.cshtml",
+              "RelativeDocumentMoniker": "Fast_Food1\\Views\\Orders\\Details.cshtml",
+              "ToolTip": "D:\\LT Web purple\\Fast_Food1\\Fast_Food1\\Views\\Orders\\Details.cshtml",
+              "RelativeToolTip": "Fast_Food1\\Views\\Orders\\Details.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAA0AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-04-13T02:36:39.78Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Food.cs",
+              "DocumentMoniker": "D:\\LT Web purple\\Fast_Food1\\Fast_Food1\\Models\\Food.cs",
+              "RelativeDocumentMoniker": "Fast_Food1\\Models\\Food.cs",
+              "ToolTip": "D:\\LT Web purple\\Fast_Food1\\Fast_Food1\\Models\\Food.cs",
+              "RelativeToolTip": "Fast_Food1\\Models\\Food.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABwAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-09T15:08:55.236Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "site.css",
+              "DocumentMoniker": "D:\\LT Web purple\\Fast_Food1\\Fast_Food1\\wwwroot\\css\\site.css",
+              "RelativeDocumentMoniker": "Fast_Food1\\wwwroot\\css\\site.css",
+              "ToolTip": "D:\\LT Web purple\\Fast_Food1\\Fast_Food1\\wwwroot\\css\\site.css",
+              "RelativeToolTip": "Fast_Food1\\wwwroot\\css\\site.css",
+              "ViewState": "AQIAAJkAAAAAAAAAAAAAAMoAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-04-10T16:18:07.389Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "D:\\LT Web purple\\Fast_Food1\\Fast_Food1\\Views\\Foods\\Edit.cshtml",
+              "RelativeDocumentMoniker": "Fast_Food1\\Views\\Foods\\Edit.cshtml",
+              "ToolTip": "D:\\LT Web purple\\Fast_Food1\\Fast_Food1\\Views\\Foods\\Edit.cshtml",
+              "RelativeToolTip": "Fast_Food1\\Views\\Foods\\Edit.cshtml",
+              "ViewState": "AQIAACMAAAAAAAAAAAAcwDsAAAAVAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-04-11T11:30:31.286Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "FoodCategoryView.cs",
+              "DocumentMoniker": "D:\\LT Web purple\\Fast_Food1\\Fast_Food1\\Models\\FoodCategoryView.cs",
+              "RelativeDocumentMoniker": "Fast_Food1\\Models\\FoodCategoryView.cs",
+              "ToolTip": "D:\\LT Web purple\\Fast_Food1\\Fast_Food1\\Models\\FoodCategoryView.cs",
+              "RelativeToolTip": "Fast_Food1\\Models\\FoodCategoryView.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAyAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-11T11:21:22.855Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\LT Web purple\\Fast_Food1\\Fast_Food1\\Views\\Orders\\Index.cshtml",
+              "RelativeDocumentMoniker": "Fast_Food1\\Views\\Orders\\Index.cshtml",
+              "ToolTip": "D:\\LT Web purple\\Fast_Food1\\Fast_Food1\\Views\\Orders\\Index.cshtml",
+              "RelativeToolTip": "Fast_Food1\\Views\\Orders\\Index.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABsAAAA+AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-04-10T16:06:08.69Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "dbo.Food [Data]",
+              "DocumentMoniker": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/aspnet_Fast_Food1_90b869cf_8159_4a4d_8473_541dd3f96485/True/SqlTable/dbo.Food.sql",
+              "ToolTip": "dbo.Food [Data]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2024-04-10T05:20:54.262Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\LT Web purple\\Fast_Food1\\Fast_Food1\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "Fast_Food1\\Views\\Home\\Index.cshtml",
+              "ToolTip": "D:\\LT Web purple\\Fast_Food1\\Fast_Food1\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "Fast_Food1\\Views\\Home\\Index.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAAAvAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-04-11T16:34:31.381Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\LT Web purple\\Fast_Food1\\Fast_Food1\\Views\\OrderHistories\\Index.cshtml",
+              "RelativeDocumentMoniker": "Fast_Food1\\Views\\OrderHistories\\Index.cshtml",
+              "ToolTip": "D:\\LT Web purple\\Fast_Food1\\Fast_Food1\\Views\\OrderHistories\\Index.cshtml",
+              "RelativeToolTip": "Fast_Food1\\Views\\OrderHistories\\Index.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAADYAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-04-10T14:47:43.143Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Delete.cshtml",
+              "DocumentMoniker": "D:\\LT Web purple\\Fast_Food1\\Fast_Food1\\Views\\Foods\\Delete.cshtml",
+              "RelativeDocumentMoniker": "Fast_Food1\\Views\\Foods\\Delete.cshtml",
+              "ToolTip": "D:\\LT Web purple\\Fast_Food1\\Fast_Food1\\Views\\Foods\\Delete.cshtml",
+              "RelativeToolTip": "Fast_Food1\\Views\\Foods\\Delete.cshtml",
+              "ViewState": "AQIAAC0AAAAAAAAAAAAAAEIAAAAQAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-04-11T16:28:22.456Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "D:\\LT Web purple\\Fast_Food1\\Fast_Food1\\Views\\Foods\\Create.cshtml",
+              "RelativeDocumentMoniker": "Fast_Food1\\Views\\Foods\\Create.cshtml",
+              "ToolTip": "D:\\LT Web purple\\Fast_Food1\\Fast_Food1\\Views\\Foods\\Create.cshtml",
+              "RelativeToolTip": "Fast_Food1\\Views\\Foods\\Create.cshtml",
+              "ViewState": "AQIAACoAAAAAAAAAAAAAADoAAAAVAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-04-11T16:28:30.795Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "CartItemsController.cs",
+              "DocumentMoniker": "D:\\LT Web purple\\Fast_Food1\\Fast_Food1\\Controllers\\CartItemsController.cs",
+              "RelativeDocumentMoniker": "Fast_Food1\\Controllers\\CartItemsController.cs",
+              "ToolTip": "D:\\LT Web purple\\Fast_Food1\\Fast_Food1\\Controllers\\CartItemsController.cs",
+              "RelativeToolTip": "Fast_Food1\\Controllers\\CartItemsController.cs",
+              "ViewState": "AQIAAB4AAAAAAAAAAAAYwKQAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-09T15:18:19.42Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "CheckOutController.cs",
+              "DocumentMoniker": "D:\\LT Web purple\\Fast_Food1\\Fast_Food1\\Controllers\\CheckOutController.cs",
+              "RelativeDocumentMoniker": "Fast_Food1\\Controllers\\CheckOutController.cs",
+              "ToolTip": "D:\\LT Web purple\\Fast_Food1\\Fast_Food1\\Controllers\\CheckOutController.cs",
+              "RelativeToolTip": "Fast_Food1\\Controllers\\CheckOutController.cs",
+              "ViewState": "AQIAABYAAAAAAAAAAAAMwCMAAAAQAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-10T04:07:07.903Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\LT Web purple\\Fast_Food1\\Fast_Food1\\Views\\CartItems\\Index.cshtml",
+              "RelativeDocumentMoniker": "Fast_Food1\\Views\\CartItems\\Index.cshtml",
+              "ToolTip": "D:\\LT Web purple\\Fast_Food1\\Fast_Food1\\Views\\CartItems\\Index.cshtml",
+              "RelativeToolTip": "Fast_Food1\\Views\\CartItems\\Index.cshtml",
+              "ViewState": "AQIAABgAAAAAAAAAAAAAACMAAAARAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-04-09T15:54:10.843Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\LT Web purple\\Fast_Food1\\Fast_Food1\\Views\\CheckOut\\Index.cshtml",
+              "RelativeDocumentMoniker": "Fast_Food1\\Views\\CheckOut\\Index.cshtml",
+              "ToolTip": "D:\\LT Web purple\\Fast_Food1\\Fast_Food1\\Views\\CheckOut\\Index.cshtml",
+              "RelativeToolTip": "Fast_Food1\\Views\\CheckOut\\Index.cshtml",
+              "ViewState": "AQIAAEUAAAAAAAAAAAAcwGgAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-04-10T03:57:15.703Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "dbo.Order [Data]",
+              "DocumentMoniker": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/aspnet_Fast_Food1_90b869cf_8159_4a4d_8473_541dd3f96485/True/SqlTable/dbo.Order.sql",
+              "ToolTip": "dbo.Order [Data]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2024-04-10T04:34:44.03Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "D:\\LT Web purple\\Fast_Food1\\Fast_Food1\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "Fast_Food1\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "D:\\LT Web purple\\Fast_Food1\\Fast_Food1\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "Fast_Food1\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AQIAACQAAAAAAAAAAAAuwDoAAAAxAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-04-10T12:13:26.153Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "Order.cs",
+              "DocumentMoniker": "D:\\LT Web purple\\Fast_Food1\\Fast_Food1\\Models\\Order.cs",
+              "RelativeDocumentMoniker": "Fast_Food1\\Models\\Order.cs",
+              "ToolTip": "D:\\LT Web purple\\Fast_Food1\\Fast_Food1\\Models\\Order.cs",
+              "RelativeToolTip": "Fast_Food1\\Models\\Order.cs",
+              "ViewState": "AQIAAAwAAAAAAAAAAADwvxwAAAAmAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-09T15:08:14.232Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "OrderDetail.cs",
+              "DocumentMoniker": "D:\\LT Web purple\\Fast_Food1\\Fast_Food1\\Models\\OrderDetail.cs",
+              "RelativeDocumentMoniker": "Fast_Food1\\Models\\OrderDetail.cs",
+              "ToolTip": "D:\\LT Web purple\\Fast_Food1\\Fast_Food1\\Models\\OrderDetail.cs",
+              "RelativeToolTip": "Fast_Food1\\Models\\OrderDetail.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAbAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-09T15:27:44.964Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "OrderHistoriesController.cs",
+              "DocumentMoniker": "D:\\LT Web purple\\Fast_Food1\\Fast_Food1\\Controllers\\OrderHistoriesController.cs",
+              "RelativeDocumentMoniker": "Fast_Food1\\Controllers\\OrderHistoriesController.cs",
+              "ToolTip": "D:\\LT Web purple\\Fast_Food1\\Fast_Food1\\Controllers\\OrderHistoriesController.cs",
+              "RelativeToolTip": "Fast_Food1\\Controllers\\OrderHistoriesController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAADkAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-10T14:47:20.142Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "PaymentCompleted.cshtml",
+              "DocumentMoniker": "D:\\LT Web purple\\Fast_Food1\\Fast_Food1\\Views\\CheckOut\\PaymentCompleted.cshtml",
+              "RelativeDocumentMoniker": "Fast_Food1\\Views\\CheckOut\\PaymentCompleted.cshtml",
+              "ToolTip": "D:\\LT Web purple\\Fast_Food1\\Fast_Food1\\Views\\CheckOut\\PaymentCompleted.cshtml",
+              "RelativeToolTip": "Fast_Food1\\Views\\CheckOut\\PaymentCompleted.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-04-10T04:45:45.057Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "DataOrder.cs",
+              "DocumentMoniker": "D:\\LT Web purple\\Fast_Food1\\Fast_Food1\\Models\\DataOrder.cs",
+              "RelativeDocumentMoniker": "Fast_Food1\\Models\\DataOrder.cs",
+              "ToolTip": "D:\\LT Web purple\\Fast_Food1\\Fast_Food1\\Models\\DataOrder.cs",
+              "RelativeToolTip": "Fast_Food1\\Models\\DataOrder.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-10T03:53:57.458Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "OrderHistory.cs",
+              "DocumentMoniker": "D:\\LT Web purple\\Fast_Food1\\Fast_Food1\\Models\\OrderHistory.cs",
+              "RelativeDocumentMoniker": "Fast_Food1\\Models\\OrderHistory.cs",
+              "ToolTip": "D:\\LT Web purple\\Fast_Food1\\Fast_Food1\\Models\\OrderHistory.cs",
+              "RelativeToolTip": "Fast_Food1\\Models\\OrderHistory.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAA1wBcAAAA6AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-10T05:56:56.353Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
+              "Title": "20240410061637_update06.cs",
+              "DocumentMoniker": "D:\\LT Web purple\\Fast_Food1\\Fast_Food1\\Data\\Migrations\\20240410061637_update06.cs",
+              "RelativeDocumentMoniker": "Fast_Food1\\Data\\Migrations\\20240410061637_update06.cs",
+              "ToolTip": "D:\\LT Web purple\\Fast_Food1\\Fast_Food1\\Data\\Migrations\\20240410061637_update06.cs",
+              "RelativeToolTip": "Fast_Food1\\Data\\Migrations\\20240410061637_update06.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-10T06:16:37.383Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "Failed.cshtml",
+              "DocumentMoniker": "D:\\LT Web purple\\Fast_Food1\\Fast_Food1\\Views\\CheckOut\\Failed.cshtml",
+              "RelativeDocumentMoniker": "Fast_Food1\\Views\\CheckOut\\Failed.cshtml",
+              "ToolTip": "D:\\LT Web purple\\Fast_Food1\\Fast_Food1\\Views\\CheckOut\\Failed.cshtml",
+              "RelativeToolTip": "Fast_Food1\\Views\\CheckOut\\Failed.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-04-10T04:45:41.078Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "PaymentMethodsController.cs",
+              "DocumentMoniker": "D:\\LT Web purple\\Fast_Food1\\Fast_Food1\\Controllers\\PaymentMethodsController.cs",
+              "RelativeDocumentMoniker": "Fast_Food1\\Controllers\\PaymentMethodsController.cs",
+              "ToolTip": "D:\\LT Web purple\\Fast_Food1\\Fast_Food1\\Controllers\\PaymentMethodsController.cs",
+              "RelativeToolTip": "Fast_Food1\\Controllers\\PaymentMethodsController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-09T16:15:16.478Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "Login.cshtml.cs",
+              "DocumentMoniker": "D:\\LT Web purple\\Fast_Food1\\Fast_Food1\\Areas\\Identity\\Pages\\Account\\Login.cshtml.cs",
+              "RelativeDocumentMoniker": "Fast_Food1\\Areas\\Identity\\Pages\\Account\\Login.cshtml.cs",
+              "ToolTip": "D:\\LT Web purple\\Fast_Food1\\Fast_Food1\\Areas\\Identity\\Pages\\Account\\Login.cshtml.cs",
+              "RelativeToolTip": "Fast_Food1\\Areas\\Identity\\Pages\\Account\\Login.cshtml.cs",
+              "ViewState": "AQIAAHQAAAAAAAAAAAAqwIgAAAAtAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-10T04:36:18.172Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "dbo.OrderDetail [Data]",
+              "DocumentMoniker": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/aspnet_Fast_Food1_90b869cf_8159_4a4d_8473_541dd3f96485/True/SqlTable/dbo.OrderDetail.sql",
+              "ToolTip": "dbo.OrderDetail [Data]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2024-04-10T04:36:03.173Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "dbo.Comments [Data]",
+              "DocumentMoniker": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/aspnet_Fast_Food1_90b869cf_8159_4a4d_8473_541dd3f96485/True/SqlTable/dbo.Comments.sql",
+              "ToolTip": "dbo.Comments [Data]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2024-04-10T04:49:31.159Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "Register.cshtml.cs",
+              "DocumentMoniker": "D:\\LT Web purple\\Fast_Food1\\Fast_Food1\\Areas\\Identity\\Pages\\Account\\Register.cshtml.cs",
+              "RelativeDocumentMoniker": "Fast_Food1\\Areas\\Identity\\Pages\\Account\\Register.cshtml.cs",
+              "ToolTip": "D:\\LT Web purple\\Fast_Food1\\Fast_Food1\\Areas\\Identity\\Pages\\Account\\Register.cshtml.cs",
+              "RelativeToolTip": "Fast_Food1\\Areas\\Identity\\Pages\\Account\\Register.cshtml.cs",
+              "ViewState": "AQIAAJgAAAAAAAAAAAAqwJ0AAAAtAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-10T04:36:21.843Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "PaymentMethods.cs",
+              "DocumentMoniker": "D:\\LT Web purple\\Fast_Food1\\Fast_Food1\\Models\\PaymentMethods.cs",
+              "RelativeDocumentMoniker": "Fast_Food1\\Models\\PaymentMethods.cs",
+              "ToolTip": "D:\\LT Web purple\\Fast_Food1\\Fast_Food1\\Models\\PaymentMethods.cs",
+              "RelativeToolTip": "Fast_Food1\\Models\\PaymentMethods.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-09T15:43:37.852Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 40,
+              "Title": "20240410040306_update05.cs",
+              "DocumentMoniker": "D:\\LT Web purple\\Fast_Food1\\Fast_Food1\\Data\\Migrations\\20240410040306_update05.cs",
+              "RelativeDocumentMoniker": "Fast_Food1\\Data\\Migrations\\20240410040306_update05.cs",
+              "ToolTip": "D:\\LT Web purple\\Fast_Food1\\Fast_Food1\\Data\\Migrations\\20240410040306_update05.cs",
+              "RelativeToolTip": "Fast_Food1\\Data\\Migrations\\20240410040306_update05.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-10T04:03:06.423Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "20240410035955_update05.cs",
+              "DocumentMoniker": "D:\\LT Web purple\\Fast_Food1\\Fast_Food1\\Data\\Migrations\\20240410035955_update05.cs",
+              "RelativeDocumentMoniker": "Fast_Food1\\Data\\Migrations\\20240410035955_update05.cs",
+              "ToolTip": "D:\\LT Web purple\\Fast_Food1\\Fast_Food1\\Data\\Migrations\\20240410035955_update05.cs",
+              "RelativeToolTip": "Fast_Food1\\Data\\Migrations\\20240410035955_update05.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-10T03:59:56.226Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "SeedData.cs",
+              "DocumentMoniker": "D:\\LT Web purple\\Fast_Food1\\Fast_Food1\\Models\\SeedData.cs",
+              "RelativeDocumentMoniker": "Fast_Food1\\Models\\SeedData.cs",
+              "ToolTip": "D:\\LT Web purple\\Fast_Food1\\Fast_Food1\\Models\\SeedData.cs",
+              "RelativeToolTip": "Fast_Food1\\Models\\SeedData.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-09T16:11:18.671Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "20240409153955_update02.cs",
+              "DocumentMoniker": "D:\\LT Web purple\\Fast_Food1\\Fast_Food1\\Data\\Migrations\\20240409153955_update02.cs",
+              "RelativeDocumentMoniker": "Fast_Food1\\Data\\Migrations\\20240409153955_update02.cs",
+              "ToolTip": "D:\\LT Web purple\\Fast_Food1\\Fast_Food1\\Data\\Migrations\\20240409153955_update02.cs",
+              "RelativeToolTip": "Fast_Food1\\Data\\Migrations\\20240409153955_update02.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-09T15:39:55.677Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "SessionExtensions.cs",
+              "DocumentMoniker": "D:\\LT Web purple\\Fast_Food1\\Fast_Food1\\Extensions\\SessionExtensions.cs",
+              "RelativeDocumentMoniker": "Fast_Food1\\Extensions\\SessionExtensions.cs",
+              "ToolTip": "D:\\LT Web purple\\Fast_Food1\\Fast_Food1\\Extensions\\SessionExtensions.cs",
+              "RelativeToolTip": "Fast_Food1\\Extensions\\SessionExtensions.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-09T15:15:46.409Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

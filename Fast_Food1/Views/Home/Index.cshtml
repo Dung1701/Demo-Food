@@ -1,0 +1,85 @@
+﻿@model Fast_Food1.Models.FoodCategoryView
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<h1>Hot Items</h1>
+<div class="container">
+    <div class="row">
+        @foreach (var hotFood in Model.HotFoods)
+        {
+            @if (hotFood.DiscountToday > 0)
+            {
+                <div class="card d-inline-block" style="width: 18rem; margin-right: 10px;">
+                    <img class="card-img-top" src="@hotFood.Image" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">@hotFood.Title</h5>
+                        <p class="card-text">
+                            <del>@hotFood.Price</del> <!-- Giá cũ -->
+                            <span style="color: red; font-weight: bold;">@(hotFood.Price - (hotFood.Price * hotFood.DiscountToday / 100))</span> <!-- Giá sau khi giảm -->
+                            <span style="color: blue; font-weight: bold;">(-@hotFood.DiscountToday%) </span> <!-- Phần trăm giảm -->
+                        </p>
+                        <p class="card-text">⭐️ @hotFood.Rating</p>
+                        <h5 class="card-title">@hotFood.Category</h5>
+                        <form asp-controller="CartItems" asp-action="Buy" method="post" style="display: inline-block;">
+                            <input type="hidden" name="id" value="@hotFood.Id" />
+                            <button type="submit" class="btn btn-primary">Add</button>
+                        </form>
+                        <form asp-controller="Foods" asp-action="Details" method="post" style="display: inline-block; margin-left: 10px;">
+                            <input type="hidden" name="id" value="@hotFood.Id" />
+                            <button type="submit" class="btn btn-primary">Details</button>
+                        </form>
+                    </div>
+                </div>
+            }
+        }
+
+    </div>
+</div>
+<form asp-controller="Home" asp-action="Index" method="get">
+    <p>
+        <select asp-for="FoodCategory" asp-items="Model.Category">
+            <option value="">All</option>
+        </select>
+
+        Title: <input type="text" asp-for="SearchString" />
+        <input type="submit" value="Search" />
+    </p>
+</form>
+
+<h1>All Items</h1>
+<div class="container">
+    <div class="row">
+        @foreach (var food in Model.Foods)
+        {
+            <div class="card d-inline-block" style="width: 18rem; margin-right: 10px;">
+                <img class="card-img-top" src="@food.Image" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">@food.Title</h5>
+                    <p class="card-text">
+                        @if (food.DiscountToday > 0)
+                        {
+                             <del>@food.Price</del> <!-- Giá cũ -->
+                            <span style="color: red; font-weight: bold;">@(food.Price - (food.Price * food.DiscountToday / 100))</span> <!-- Giá sau khi giảm -->
+                            <span style="color: blue; font-weight: bold;">(-@food.DiscountToday%)</span> <!-- Phần trăm giảm -->
+                        }
+                        else
+                        {
+                            @food.Price <!-- Hiển thị giá không có giảm giá -->
+                        }
+                    </p>
+                    <p class="card-text">⭐️@food.Rating</p>
+                    <h5 class="card-title">@food.Category</h5>
+                    <form asp-controller="CartItems" asp-action="Buy" method="post" style="display: inline-block;">
+                        <input type="hidden" name="id" value="@food.Id" />
+                        <button type="submit" class="btn btn-primary">Add</button>
+                    </form>
+                    <form asp-controller="Foods" asp-action="Details" method="post" style="display: inline-block; margin-left: 10px;">
+                        <input type="hidden" name="id" value="@food.Id" />
+                        <button type="submit" class="btn btn-primary">Details</button>
+                    </form>
+                </div>
+            </div>
+        }
+    </div>
+</div>
