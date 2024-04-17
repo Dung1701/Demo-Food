@@ -2,8 +2,18 @@
 @{
     ViewData["Title"] = "Home Page";
 }
+<form asp-controller="Home" asp-action="Index" method="get">
+    <p>
+        <select asp-for="FoodCategory" asp-items="Model.Category">
+            <option value="">All</option>
+        </select>
 
+        Title: <input type="text" asp-for="SearchString" />
+        <input type="submit" value="Search" />
+    </p>
+</form>
 <h1>Hot Items</h1>
+
 <div class="container">
     <div class="row">
         @foreach (var hotFood in Model.HotFoods)
@@ -19,8 +29,12 @@
                             <span style="color: red; font-weight: bold;">@(hotFood.Price - (hotFood.Price * hotFood.DiscountToday / 100))</span> <!-- Giá sau khi giảm -->
                             <span style="color: blue; font-weight: bold;">(-@hotFood.DiscountToday%) </span> <!-- Phần trăm giảm -->
                         </p>
-                        <p class="card-text">⭐️ @hotFood.Rating</p>
+                       <p class="card-text">⭐️ @hotFood.Rating.Value.ToString("F1")</p>
                         <h5 class="card-title">@hotFood.Category</h5>
+                        <div class="d-flex flex-wrap">
+                            <p class="col-md-9">Stock: @hotFood.Amount</p>
+                            <p>@hotFood.Sold Sold</p>
+                        </div>
                         <form asp-controller="CartItems" asp-action="Buy" method="post" style="display: inline-block;">
                             <input type="hidden" name="id" value="@hotFood.Id" />
                             <button type="submit" class="btn btn-primary">Add</button>
@@ -36,16 +50,6 @@
 
     </div>
 </div>
-<form asp-controller="Home" asp-action="Index" method="get">
-    <p>
-        <select asp-for="FoodCategory" asp-items="Model.Category">
-            <option value="">All</option>
-        </select>
-
-        Title: <input type="text" asp-for="SearchString" />
-        <input type="submit" value="Search" />
-    </p>
-</form>
 
 <h1>All Items</h1>
 <div class="container">
@@ -68,8 +72,12 @@
                             @food.Price <!-- Hiển thị giá không có giảm giá -->
                         }
                     </p>
-                    <p class="card-text">⭐️@food.Rating</p>
+                    <p class="card-text">⭐️ @food.Rating.Value.ToString("F1")</p>
                     <h5 class="card-title">@food.Category</h5>
+                    <div class="d-flex flex-wrap">
+                        <p class="col-md-9">Stock: @food.Amount</p>
+                        <p>@food.Sold Sold</p>
+                    </div>
                     <form asp-controller="CartItems" asp-action="Buy" method="post" style="display: inline-block;">
                         <input type="hidden" name="id" value="@food.Id" />
                         <button type="submit" class="btn btn-primary">Add</button>

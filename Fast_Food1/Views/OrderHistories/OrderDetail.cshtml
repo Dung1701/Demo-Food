@@ -1,0 +1,114 @@
+﻿@model Fast_Food1.Models.Order
+
+@{
+    ViewData["Title"] = "Order Detail";
+}
+
+<!-- Hiển thị thông tin chi tiết của đơn hàng -->
+<h1>Order Details</h1>
+<!-- Hiển thị thông tin đơn hàng -->
+<h2>Order #@Model.Id</h2>
+<p>Order Date: @Model.OrderDate.ToString("dd/MM/yyyy")</p>
+<!-- Hiển thị danh sách sản phẩm đã đặt hàng -->
+<h3>Ordered Items</h3>
+<div class="ordered-items-container">
+    @foreach (var detail in Model.OrderDetails)
+    {
+        <div class="ordered-item">
+            <img src="@detail.Food.Image" alt="@detail.Food.Title" style="width: 100px; height: 100px;" />
+            <p>@detail.Food.Title</p>
+            <p>Price: @detail.Food.Price</p>
+            <p>Quantity: @detail.Quantity</p>
+            <!-- Hiển thị thông tin chi tiết sản phẩm khác nếu cần -->
+            <!-- Form để mua lại sản phẩm -->
+            <form asp-controller="CartItems" asp-action="Buy" method="post">
+                <input type="hidden" name="id" value="@detail.Food.Id" />
+                <button type="submit" class="btn btn-primary">Buy Again</button>
+            </form>
+        </div>
+    }
+</div>
+
+
+<!-- Hiển thị các thông tin khác của đơn hàng -->
+<h3>Order Information</h3>
+<p>Total Price: @Model.TotalPrice</p>
+<label>Payment Method:</label>
+<span>
+    @if (Model.PaymentMethods != null)
+    {
+        @Model.PaymentMethods.Name
+    }
+    else
+    {
+        <span class="text-danger">Not Updated</span>
+    }
+</span>
+
+<p>Address: @Model.Address</p>
+@if (Model.Status)
+{
+    <p>Received Date: @Model.ReceivedDate.ToString("dd/MM/yyyy")</p>
+}
+else
+{
+    <p>Status: Not Received</p>
+}
+
+<table class="order-summary">
+    <thead>
+        <tr>
+            <th>Product</th>
+            <th>Price</th>
+            <th>Quantity</th>
+            <th>Total</th>
+            <th>Action</th> <!-- Thêm cột mới cho nút chuyển hướng -->
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var detail in Model.OrderDetails)
+        {
+            decimal originalPrice = detail.Food.Price; // Lấy giá gốc của sản phẩm
+            decimal discountPercent = detail.Food.DiscountToday; // Lấy phần trăm giảm giá của sản phẩm
+
+            // Tính giảm giá từ phần trăm giảm giá
+            decimal discountAmount = originalPrice * discountPercent / 100;
+
+            // Tính giá cuối cùng của sản phẩm sau khi đã giảm giá
+            decimal finalPrice = originalPrice - discountAmount;
+
+            decimal itemTotal = detail.Quantity * finalPrice; // Tính giá tổng đã giảm
+
+            <tr>
+                <td>@Html.DisplayFor(modelItem => detail.Food.Title)</td>
+                <td>@Html.DisplayFor(modelItem => finalPrice)</td> <!-- Hiển thị giá đã giảm -->
+                <td>@Html.DisplayFor(modelItem => detail.Quantity)</td>
+                <td>@(itemTotal)</td> <!-- Hiển thị giá tổng đã giảm -->
+                <td>
+                    <!-- Kiểm tra xem sản phẩm đã được đánh giá hay chưa -->
+                    @if (Model.Status && !detail.HasRated)
+                    {
+                        <a asp-controller="OrderHistories" asp-action="Rate" asp-route-id="@detail.FoodId" class="btn btn-primary">Rate Food</a>
+                    }
+                    else
+                    {
+                        <!-- Hiển thị thông báo nếu đã đánh giá -->
+                        <span class="text-success">Rated</span>
+                    }
+                </td>
+            </tr>
+        }
+
+    </tbody>
+    <tfoot>
+        <tr class="total-row">
+            <td colspan="3"><b>Total Order:</b></td>
+            <td class="total-column"><b><span class="shopee-orange">@Model.TotalPrice.ToString("C")</span></b></td>
+            <td></td> <!-- Thêm một cột trống cho phù hợp -->
+        </tr>
+    </tfoot>
+</table>
+
+
+
+<div><a asp-controller="Home" asp-action="Index">Back to Home</a></div>

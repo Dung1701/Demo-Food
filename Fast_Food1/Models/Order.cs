@@ -26,6 +26,7 @@ namespace Fast_Food1.Models
         [DataType(DataType.Date)]
         public DateTime ReceivedDate { get; set; }
         public bool Status { get; set; } = false;
+        public bool HasRated { get; set; } = false;
         public ICollection<OrderDetail> OrderDetails { get; set; } = new List<OrderDetail>();
         public ICollection<CartItem> CartItems { get; set; } = new List<CartItem>();
     }

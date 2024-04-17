@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations.Schema;
+﻿using Fast_Food1.Data;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Fast_Food1.Models
 {
@@ -14,5 +15,10 @@ namespace Fast_Food1.Models
 
         [ForeignKey("FoodId")]
         public Food Food { get; set; }
+        public string? UserId { get; set; }
+        [ForeignKey("UserId")]
+        public ApplicationUser? User { get; set; }
+
+        public int Rating { get; set; }
     }
 }

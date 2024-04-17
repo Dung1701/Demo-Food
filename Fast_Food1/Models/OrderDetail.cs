@@ -17,5 +17,6 @@ namespace Fast_Food1.Models
 
         [Column(TypeName = "decimal(18, 0)")]
         public decimal Subtotal { get; set; } // Tổng tiền của chi tiết đơn hàng
+        public bool HasRated { get; set; } = false;
     }
 }

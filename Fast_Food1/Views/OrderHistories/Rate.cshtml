@@ -1,0 +1,172 @@
+﻿@model Fast_Food1.Models.Food
+@using Fast_Food1.Data;
+@{
+    ViewData["Title"] = "Rate";
+}
+
+<h1>Rate Food</h1>
+
+<div>
+    <h4>Food</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(Model => Model.Image)
+        </dt>
+        <dd class="col-sm-10">
+            <img class="rounded-3" height="270" width="280" alt="@Model.Image" src="@Model.Image">
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Title)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Title)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Price)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Price)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Category)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Category)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Rating)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Rating)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Amount)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Amount)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Sold)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Sold)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.DiscountToday)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.DiscountToday)
+        </dd>
+    </dl>
+</div>
+
+<div class="comment-section">
+    <h4>Add a Comment</h4>
+    <form asp-action="AddComment" asp-controller="Foods" method="post">
+        <input type="hidden" name="Id" value="@Model.Id" />
+        <div class="form-group">
+            <label for="comment">Comment:</label>
+            <textarea name="comment" class="form-control" rows="3"></textarea>
+        </div>
+        <div class="form-group">
+            <label for="rating">Rating:</label>
+            <div class="rating">
+                <input type="radio" id="star5" name="rating" value="5" /><label for="star5"></label>
+                <input type="radio" id="star4" name="rating" value="4" /><label for="star4"></label>
+                <input type="radio" id="star3" name="rating" value="3" /><label for="star3"></label>
+                <input type="radio" id="star2" name="rating" value="2" /><label for="star2"></label>
+                <input type="radio" id="star1" name="rating" value="1" /><label for="star1"></label>
+            </div>
+        </div>
+        <br />
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>
+
+<style>
+    .rating {
+        unicode-bidi: bidi-override;
+        direction: rtl;
+        text-align: center;
+    }
+
+        .rating input {
+            display: none;
+        }
+
+        .rating label {
+            cursor: pointer;
+            display: inline-block;
+            padding: 0 5px;
+            position: relative;
+        }
+
+            .rating label:before {
+                content: '★';
+                font-size: 30px;
+                color: #ddd;
+            }
+
+        .rating input:checked ~ label:before {
+            color: #f90;
+        }
+</style>
+
+
+@if (Model.Comments != null && Model.Comments.Any())
+{
+    var users = ViewBag.Users as List<ApplicationUser>;
+    foreach (var comment in Model.Comments)
+    {
+        var user = users!.FirstOrDefault(x => x.Id == comment.UserId);
+        <div class="p-3">
+            <div>
+                <pre style="color:rebeccapurple">➤@user!.UserName      @comment.CreatedDate.ToString("MM/dd/yyyy hh:mm tt")</pre>
+                <p>@comment.Content </p>
+            </div>
+        </div>
+    }
+}
+<div>
+    <form asp-controller="CartItems" asp-action="Buy" method="post">
+        <input type="hidden" name="id" value="@Model.Id" />
+        <button type="submit" class="btn btn-primary">Add to Cart</button>
+    </form>
+</div>
+@if (ViewData["SuggestedFoods"] != null)
+{
+    <div>
+        <h4>Suggested Foods</h4>
+        <div class="row">
+            @foreach (var suggestedFood in (List<Fast_Food1.Models.Food>)ViewData["SuggestedFoods"])
+            {
+                <div class="col-md-3 mb-3">
+                    <div class="card">
+                        <a asp-action="Details" asp-controller="Foods" asp-route-id="@suggestedFood.Id">
+                            <img src="@suggestedFood.Image" class="card-img-top" alt="@suggestedFood.Title">
+                        </a>
+                        <div class="card-body">
+                            <h5 class="card-title">
+                                <a asp-action="Details" asp-controller="Foods" asp-route-id="@suggestedFood.Id">
+                                    @suggestedFood.Title
+                                </a>
+                            </h5>
+                            <p class="card-text">Price: @suggestedFood.Price</p>
+                            <p class="card-text">Category: @suggestedFood.Category</p>
+                            <p class="card-text">Rating: @suggestedFood.Rating</p>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+}
+
+@if (User.IsInRole("Admin"))
+{
+    <div>
+        <a asp-action="Edit" asp-route-id="@Model?.Id">Edit</a>
+    </div>
+}
+<div><a asp-controller="Home" asp-action="Index">Back to Home</a></div>

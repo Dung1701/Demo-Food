@@ -24,7 +24,7 @@ namespace Fast_Food1.Controllers
             }
 
             // Lấy danh sách sản phẩm hot (ví dụ: sản phẩm có đánh giá cao)
-            var hotFoods = await _context.Food.Where(f => f.Rating >= 4).Take(5).ToListAsync();
+            var hotFoods = await _context.Food.Where(f => f.Rating >= 4.0f).Take(5).ToListAsync();
 
             // Use LINQ to get list of genres.
             IQueryable<string> genreQuery = from m in _context.Food

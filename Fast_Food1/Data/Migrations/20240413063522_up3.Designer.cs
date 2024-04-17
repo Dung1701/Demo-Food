@@ -4,6 +4,7 @@ using Fast_Food1.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Fast_Food1.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20240413063522_up3")]
+    partial class up3
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -140,17 +143,9 @@ namespace Fast_Food1.Data.Migrations
                     b.Property<int>("FoodId")
                         .HasColumnType("int");
 
-                    b.Property<int>("Rating")
-                        .HasColumnType("int");
-
-                    b.Property<string>("UserId")
-                        .HasColumnType("nvarchar(450)");
-
                     b.HasKey("Id");
 
                     b.HasIndex("FoodId");
-
-                    b.HasIndex("UserId");
 
                     b.ToTable("Comments");
                 });
@@ -181,11 +176,8 @@ namespace Fast_Food1.Data.Migrations
                     b.Property<decimal>("Price")
                         .HasColumnType("decimal(18, 0)");
 
-                    b.Property<float?>("Rating")
-                        .HasColumnType("real");
-
-                    b.Property<decimal>("RatingAverage")
-                        .HasColumnType("decimal(18,2)");
+                    b.Property<int?>("Rating")
+                        .HasColumnType("int");
 
                     b.Property<int>("Sold")
                         .HasColumnType("int");
@@ -208,9 +200,6 @@ namespace Fast_Food1.Data.Migrations
 
                     b.Property<string>("Address")
                         .HasColumnType("nvarchar(max)");
-
-                    b.Property<bool>("HasRated")
-                        .HasColumnType("bit");
 
                     b.Property<DateTime>("OrderDate")
                         .HasColumnType("datetime2");
@@ -249,9 +238,6 @@ namespace Fast_Food1.Data.Migrations
 
                     b.Property<int>("FoodId")
                         .HasColumnType("int");
-
-                    b.Property<bool>("HasRated")
-                        .HasColumnType("bit");
 
                     b.Property<int>("OrderId")
                         .HasColumnType("int");
@@ -501,13 +487,7 @@ namespace Fast_Food1.Data.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("Fast_Food1.Data.ApplicationUser", "User")
-                        .WithMany("comments")
-                        .HasForeignKey("UserId");
-
                     b.Navigation("Food");
-
-                    b.Navigation("User");
                 });
 
             modelBuilder.Entity("Fast_Food1.Models.Order", b =>
@@ -619,8 +599,6 @@ namespace Fast_Food1.Data.Migrations
             modelBuilder.Entity("Fast_Food1.Data.ApplicationUser", b =>
                 {
                     b.Navigation("Orders");
-
-                    b.Navigation("comments");
                 });
 
             modelBuilder.Entity("Fast_Food1.Models.Food", b =>

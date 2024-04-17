@@ -11,7 +11,7 @@ namespace Fast_Food1.Models
         [Column(TypeName = "decimal(18, 0)")]
         public decimal Price { get; set; }
         public string? Category { get; set; }
-        public int? Rating { get; set; }
+        public float? Rating { get; set; }
         public string? Image { get; set; }
         public ICollection<Comment> Comments { get; set; }
 
@@ -24,5 +24,7 @@ namespace Fast_Food1.Models
 
         [Column(TypeName = "decimal(18, 0)")] // Loại cột được xác định
         public decimal FinalPrice { get; set; }
+
+        public decimal RatingAverage { get; set; }
     }
 }

@@ -79,5 +79,40 @@ namespace Fast_Food1.Controllers
             }
             return RedirectToAction(nameof(Index));
         }
+        public async Task<IActionResult> Rate(int id)
+        {
+            var food = await _context.Food.FindAsync(id);
+            if (food == null)
+            {
+                return NotFound();
+            }
+            return View(food);
+        }
+        // GET: OrderHistories/OrderDetail/5
+        public async Task<IActionResult> OrderDetail(int? id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            var order = await _context.Order
+                .Include(o => o.OrderDetails)
+                .ThenInclude(od => od.Food)
+                .FirstOrDefaultAsync(m => m.Id == id);
+
+
+            if (order == null)
+            {
+                return NotFound();
+            }
+            // Lấy thông tin về phương thức thanh toán của đơn hàng
+            var paymentMethod = await _context.PaymentMethods.FirstOrDefaultAsync(p => p.Id == order.PaymentMethodsId);
+
+            // Thêm thông tin phương thức thanh toán vào đơn hàng
+            order.PaymentMethods = paymentMethod;
+            return View(order);
+        }
+
     }
 }

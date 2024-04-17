@@ -92,6 +92,10 @@ namespace MyBookApp.Controllers
                 }
                 foreach (var item in cart!)
                 {
+                    var updatebook = _context.Food.FirstOrDefault(x => x.Id == item.Food!.Id);
+                    updatebook!.Amount = updatebook!.Amount - item.Quantity;
+                    updatebook!.Sold = updatebook!.Sold + item.Quantity;
+                    _context.Food.Update(updatebook);
                     var orderDetail = new OrderDetail()
                     {
                         OrderId = detail.Id,
@@ -108,7 +112,8 @@ namespace MyBookApp.Controllers
             }
             return RedirectToAction(nameof(Failed));
         }
+       
 
-     
+
     }
 }

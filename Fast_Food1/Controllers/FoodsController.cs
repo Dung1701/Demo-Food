@@ -8,6 +8,7 @@ using Microsoft.EntityFrameworkCore;
 using Fast_Food1.Data;
 using Fast_Food1.Models;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
 
 namespace Fast_Food1.Controllers
 {
@@ -15,10 +16,11 @@ namespace Fast_Food1.Controllers
     public class FoodsController : Controller
     {
         private readonly ApplicationDbContext _context;
-
-        public FoodsController(ApplicationDbContext context)
+        private readonly UserManager<ApplicationUser> _userManager;
+        public FoodsController(ApplicationDbContext context, UserManager<ApplicationUser> userManager)
         {
             _context = context;
+            _userManager = userManager;
         }
 
         public async Task<IActionResult> Index(string FoodCategory, string searchString)
@@ -64,23 +66,64 @@ namespace Fast_Food1.Controllers
         }
 
         // GET: Foods/Details/5
-        public async Task<IActionResult> Details(int? id)
-        {
-            if (id == null)
-            {
-                return NotFound();
-            }
+        // GET: Foods/Details/5
+        //public async Task<IActionResult> Details(int id)
+        //{
+        //    var food = await _context.Food
+        //        .Include(f => f.Comments) // Bao gồm các comment
+        //        .FirstOrDefaultAsync(f => f.Id == id);
 
-            var food = await _context.Food.FirstOrDefaultAsync(m => m.Id == id);
+        //    if (food == null)
+        //    {
+        //        return NotFound();
+        //    }
+
+        //    // Kiểm tra xem người dùng đã mua hàng hay chưa
+        //    var userId = _userManager.GetUserId(User);
+        //    var completedOrders = await _context.Order
+        //        .Where(o => o.UserId == userId && o.Status == true) // Đơn hàng đã hoàn thành của người dùng hiện tại
+        //        .ToListAsync();
+
+        //    ViewBag.HasCompletedOrder = completedOrders.Any();
+
+        //    // Lấy danh sách các sản phẩm thuộc cùng danh mục với sản phẩm hiện tại
+        //    var suggestedFoods = await _context.Food.Where(m => m.Category == food.Category && m.Id != id).ToListAsync();
+
+        //    ViewData["SuggestedFoods"] = suggestedFoods;
+
+        //    // Truyền danh sách người dùng vào ViewBag
+        //    ViewBag.Users = await _context.Users.ToListAsync();
+
+        //    return View(food);
+        //}
+        public async Task<IActionResult> Details(int id)
+        {
+            var food = await _context.Food
+                .Include(f => f.Comments)
+                .FirstOrDefaultAsync(f => f.Id == id);
+
             if (food == null)
             {
                 return NotFound();
             }
 
+            // Kiểm tra xem người dùng đã mua hàng hay chưa
+            var userId = _userManager.GetUserId(User);
+            var completedOrders = await _context.Order
+                .Where(o => o.UserId == userId && o.Status == true) // Đơn hàng đã hoàn thành của người dùng hiện tại
+                .ToListAsync();
+
+            ViewBag.HasCompletedOrder = completedOrders.Any(); // Kiểm tra xem người dùng đã có đơn hàng hoàn thành hay không
+
             // Lấy danh sách các sản phẩm thuộc cùng danh mục với sản phẩm hiện tại
-            var suggestedFoods = await _context.Food.Where(m => m.Category == food.Category && m.Id != id).ToListAsync();
+            var suggestedFoods = await _context.Food
+                .Where(m => m.Category == food.Category && m.Id != id)
+                .ToListAsync();
 
             ViewData["SuggestedFoods"] = suggestedFoods;
+
+            // Truyền danh sách người dùng vào ViewBag
+            ViewBag.Users = await _context.Users.ToListAsync();
 
             return View(food);
         }
@@ -200,30 +243,118 @@ namespace Fast_Food1.Controllers
         {
             return _context.Food.Any(e => e.Id == id);
         }
-        // POST: Foods/AddComment
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> AddComment(int foodId, string comment)
-        {
-            var food = await _context.Food.FirstOrDefaultAsync(m => m.Id == foodId);
+        //[HttpPost, ActionName("AddComment")]
+        //[ValidateAntiForgeryToken]
+        //public async Task<IActionResult> AddComment(int Id, string comment, int rating)
+        //{
+        //    var food = _context.Food.Include(f => f.Comments).FirstOrDefault(m => m.Id == Id);
+        //    if (food == null)
+        //    {
+        //        return NotFound();
+        //    }
+        //    if (string.IsNullOrWhiteSpace(comment))
+        //    {
+        //        // Trả về một lỗi hoặc thông báo cho người dùng biết rằng họ cần nhập một bình luận hợp lệ
+        //        ModelState.AddModelError("comment", "Please enter a valid comment.");
+        //        return RedirectToAction(nameof(Details), new { id = Id });
+        //    }
+        //    var newComment = new Comment
+        //    {
+        //        FoodId = Id,
+        //        Content = comment,
+        //        CreatedDate = DateTime.Now,
+        //        UserId = _userManager.GetUserId(User),
+        //        Rating = rating // Lấy giá trị rating từ form
+        //    };
 
+        //    _context.Add(newComment);
+        //    await _context.SaveChangesAsync();
+
+        //    // Tính toán trung bình đánh giá
+        //    var comments = food.Comments.ToList();
+        //    int numberOfRatings = comments.Count;
+        //    decimal totalRating = comments.Sum(c => c.Rating);
+        //    food.Rating = (int)Math.Round(totalRating / numberOfRatings); // Cập nhật rating của món ăn
+
+        //    // Cập nhật trung bình đánh giá vào món ăn
+        //    _context.Update(food);
+        //    await _context.SaveChangesAsync();
+
+        //    return RedirectToAction(nameof(Details), new { id = Id });
+        //}
+        [HttpPost, ActionName("AddComment")]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> AddComment(int Id, string comment, int rating)
+        {
+            var food = _context.Food.Include(f => f.Comments).FirstOrDefault(m => m.Id == Id);
             if (food == null)
             {
                 return NotFound();
             }
 
+            // Xác định người dùng đã mua hàng và đánh giá sản phẩm
+            var userId = _userManager.GetUserId(User);
+            var completedOrders = await _context.Order
+                 .Include(o => o.OrderDetails) // Bổ sung để lấy danh sách chi tiết đơn hàng
+                .Where(o => o.UserId == userId && o.Status == true) // Đơn hàng đã hoàn thành của người dùng hiện tại
+                   .ToListAsync();
+
+            var hasCompletedOrder = completedOrders.Any(); // Kiểm tra xem người dùng đã có đơn hàng hoàn thành hay không
+
+            if (!hasCompletedOrder)
+            {
+                // Trả về một lỗi hoặc thông báo cho người dùng biết rằng họ cần mua hàng trước khi đánh giá
+                ModelState.AddModelError("comment", "You need to complete an order before adding a comment.");
+                return RedirectToAction(nameof(Details), new { id = Id });
+            }
+
+            // Thêm đánh giá vào cơ sở dữ liệu
             var newComment = new Comment
             {
-
-                FoodId = foodId,
+                FoodId = Id,
                 Content = comment,
-                CreatedDate = DateTime.Now
+                CreatedDate = DateTime.Now,
+                UserId = userId,
+                Rating = rating
             };
 
             _context.Add(newComment);
             await _context.SaveChangesAsync();
 
-            return RedirectToAction(nameof(Details), new { id = foodId });
+            // Cập nhật trạng thái HasRated của từng chi tiết đơn hàng
+            foreach (var order in completedOrders)
+            {
+                foreach (var detail in order.OrderDetails)
+                {
+                    if (detail.FoodId == Id)
+                    {
+                        detail.HasRated = true;
+                        _context.Update(detail);
+                    }
+                }
+            }
+            await _context.SaveChangesAsync();
+
+            // Cập nhật trạng thái HasRated của đơn hàng thành true
+            var orderToUpdate = completedOrders.FirstOrDefault();
+            if (orderToUpdate != null)
+            {
+                orderToUpdate.HasRated = true;
+                _context.Update(orderToUpdate);
+                await _context.SaveChangesAsync();
+            }
+
+            // Tính toán trung bình đánh giá và cập nhật lại rating của sản phẩm
+            var comments = food.Comments.ToList();
+            int numberOfRatings = comments.Count;
+            decimal totalRating = comments.Sum(c => c.Rating);
+            food.Rating = (int)Math.Round(totalRating / numberOfRatings); // Cập nhật rating của món ăn
+
+            // Cập nhật trung bình đánh giá vào món ăn
+            _context.Update(food);
+            await _context.SaveChangesAsync();
+
+            return RedirectToAction(nameof(Details), new { id = Id });
         }
     }
 }
