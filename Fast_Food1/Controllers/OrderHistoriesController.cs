@@ -113,6 +113,5 @@ namespace Fast_Food1.Controllers
             order.PaymentMethods = paymentMethod;
             return View(order);
         }
-
     }
 }

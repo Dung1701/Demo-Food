@@ -151,7 +151,7 @@ namespace Fast_Food1.Controllers
             return View(food);
         }
 
-        // GET: Foods/Edit/5
+        // GET: Moviehis/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
@@ -167,12 +167,12 @@ namespace Fast_Food1.Controllers
             return View(food);
         }
 
-        // POST: Foods/Edit/5
+        // POST: Moviehis/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Title,Price,Category,Rating,Image,Amount,Sold,DiscountToday")] Food food)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Title,Price,Category,Rating,Image,Amount,Sold,DiscountToday,FinalPrice,RatingAverage")] Food food)
         {
             if (id != food.Id)
             {
@@ -183,11 +183,8 @@ namespace Fast_Food1.Controllers
             {
                 try
                 {
-                    //_context.Update(food);
-                    //await _context.SaveChangesAsync();();
                     _context.Update(food);
                     await _context.SaveChangesAsync();
-                    return RedirectToAction(nameof(Index));
                 }
                 catch (DbUpdateConcurrencyException)
                 {

@@ -29,6 +29,7 @@ namespace Fast_Food1.Models
         public bool HasRated { get; set; } = false;
         public ICollection<OrderDetail> OrderDetails { get; set; } = new List<OrderDetail>();
         public ICollection<CartItem> CartItems { get; set; } = new List<CartItem>();
+        public ICollection<Comment> Reviews { get; set; } = new List<Comment>();
     }
 }
 

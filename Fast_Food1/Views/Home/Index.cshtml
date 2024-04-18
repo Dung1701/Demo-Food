@@ -12,8 +12,9 @@
         <input type="submit" value="Search" />
     </p>
 </form>
+@if (Model.ShowHotItems)
+{
 <h1>Hot Items</h1>
-
 <div class="container">
     <div class="row">
         @foreach (var hotFood in Model.HotFoods)
@@ -50,7 +51,7 @@
 
     </div>
 </div>
-
+}
 <h1>All Items</h1>
 <div class="container">
     <div class="row">
@@ -89,5 +90,31 @@
                 </div>
             </div>
         }
+        <!-- Phân trang -->
+        <div class="pagination">
+            @if (ViewBag.Page > 1)
+            {
+                <a href="?page=1">&laquo;</a>
+                <a href="?page=@(ViewBag.Page - 1)">&lsaquo;</a>
+            }
+
+            @for (int i = 1; i <= ViewBag.TotalPages; i++)
+            {
+                @if (i == ViewBag.Page)
+                {
+                    <span class="current">@i</span>
+                }
+                else
+                {
+                    <a href="?page=@i">@i</a>
+                }
+            }
+
+            @if (ViewBag.Page < ViewBag.TotalPages)
+            {
+                <a href="?page=@(ViewBag.Page + 1)">&rsaquo;</a>
+                <a href="?page=@ViewBag.TotalPages">&raquo;</a>
+            }
+        </div>
     </div>
 </div>

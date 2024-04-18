@@ -10,5 +10,6 @@ namespace Fast_Food1.Models
          
         public string?  SearchString { get; set; }
         public List<Food> HotFoods { get; set; }
+        public bool ShowHotItems { get; set; }
     }
 }

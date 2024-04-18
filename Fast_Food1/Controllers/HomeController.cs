@@ -16,7 +16,7 @@ namespace Fast_Food1.Controllers
             _logger = logger;
             _context = context;
         }
-        public async Task<IActionResult> Index(string FoodCategory, string searchString)
+        public async Task<IActionResult> Index(string FoodCategory, string searchString, int page = 1)
         {
             if (_context.Food == null)
             {
@@ -42,12 +42,25 @@ namespace Fast_Food1.Controllers
             {
                 foods = foods.Where(x => x.Category == FoodCategory);
             }
+            int pageSize = 4;
+            int totalFoods = await foods.CountAsync();
+            int totalPages = (int)Math.Ceiling((double)totalFoods / pageSize);
+
+            ViewBag.TotalPages = totalPages;
+            ViewBag.PageSize = pageSize;
+            ViewBag.Page = page;
+
+            var pagedFoods = await foods.OrderBy(m => m.Id)
+                             .Skip((page - 1) * pageSize)
+                             .Take(pageSize)
+                             .ToListAsync();
 
             var listFoodCategory = new FoodCategoryView
             {
                 Category = new SelectList(await genreQuery.Distinct().ToListAsync()),
-                Foods = await foods.ToListAsync(),
-                HotFoods = hotFoods
+                Foods = pagedFoods, 
+                HotFoods = hotFoods,
+                ShowHotItems = string.IsNullOrEmpty(searchString)
             };
 
             return View(listFoodCategory);
