@@ -16,7 +16,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Fast_Food1")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4df022b31da200d2095e2e1fcca1372f43802a5d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+356be68b8f11c34745750d8f133930ddaf17e691")]
 [assembly: System.Reflection.AssemblyProductAttribute("Fast_Food1")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Fast_Food1")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
